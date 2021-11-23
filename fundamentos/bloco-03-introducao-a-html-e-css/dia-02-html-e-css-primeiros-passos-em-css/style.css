@@ -1,0 +1,39 @@
+body{
+    font-size: 26px;
+    
+}
+h1{
+    width: 65px;
+    color: orange;
+    font-family: sans-serif;
+}
+p{
+    font-weight: 600;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+ul{
+    background-color: rgb(168, 168, 168);
+    color: rgb(255, 255, 255);
+    
+}
+.cores{
+    background-color: rgb(177, 177, 177);
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul,li{
+    color: yellow;
+    list-style-type: circle;
+    /*list-style-position: inside;*/
+    list-style-position: inside ;
+}
+ul,li+li{
+    color: red;
+}
+ul,li+li+li{
+    color: rgb(95, 48, 48);
+    
+}
