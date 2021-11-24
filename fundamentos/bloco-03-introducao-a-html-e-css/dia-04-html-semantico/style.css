@@ -1,0 +1,37 @@
+* {
+    text-align: center;
+  }
+
+  li{
+      display: inline-block;
+  }
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    padding: 20px;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+  }
+
+  .second, .third{
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+  }
