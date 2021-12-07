@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="pratica5_1.css">
+    </head>
+  <body style="background-color: rgb(29, 29, 29); color:white; text-align: center;" id="container">
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="paragrafo">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="paragrafo">Segundo parágrafo!</p>
+    </header>
+
+    <script>
+      let titulo = document.getElementById("page-title").innerText = "Filhos da Experança";
+      let textoParagraph = document.getElementById("paragraph").innerText = "Uma obra de ficção baseada em um livro com o mesmo nome"
+      let subtitulo = document.getElementById("subtitle").innerText = "Um filme sobre a vida, morte e a sociedade";
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+
+      let paragrafo = [document.getElementsByClassName("paragrafo")[0], document.getElementsByClassName("paragrafo")[1]]
+      paragrafo[0].innerText = "Dê uma cor para este parágrafo!" 
+      paragrafo[0].style.color = "wheat"; 
+      paragrafo[1].innerText = "Segundo parágrafo!"
+
+      let subtiulo = document.getElementsByTagName("h4")[0].innerText = "Subtítulo";
+
+    </script>
+
+<header id="header-container">
+    <h1>Administrador do Tempo da Trybe</h1>
+  </header>
+
+  <section class="emergency-tasks">
+    <div>
+      <h3>Urgente e Importante</h3>
+    </div>
+    <div>
+      <h3>Urgente e Não-Importante</h3>
+    </div>
+  </section>
+
+  <section class="no-emergency-tasks">
+    <div>
+      <h3>Não-Urgente e Importante</h3>
+    </div>
+    <div>
+      <h3>Não-Urgente e Não-Importante</h3>
+    </div>
+  </section>
+
+  <footer id="footer-container">
+    <div>&copy; Trybe</div>
+  </footer>
+
+  <script>
+      let cabecalho = document.querySelector("#header-container");
+      cabecalho.style.background = "red";
+
+      let rodaPe = document.getElementById("footer-container");
+      rodaPe.style.background = "darkgreen";
+      
+      let naoUrgente = document.querySelector(".no-emergency-tasks");
+      naoUrgente.style.background = "yellow"
+      let naoUrgenteTitulo = [document.querySelectorAll(".no-emergency-tasks h3")[0], document.querySelectorAll(".no-emergency-tasks h3")[1]];
+      naoUrgenteTitulo[0].style.background = "black"
+      naoUrgenteTitulo[1].style.background = "black"
+
+      let urgenteTexto = [document.getElementsByTagName("h3")[0], document.getElementsByTagName("h3")[1]];
+      urgenteTexto[0].style.background = "purple"
+      urgenteTexto[1].style.background = "purple"
+      let urgente = [document.getElementsByClassName("emergency-tasks")[0], document.getElementsByClassName("emergency-tasks")[1]];
+      urgente[0].style.background = "pink";
+      urgente[1].style.background = "pink";
+  </script>
+  </body>
+</html>
