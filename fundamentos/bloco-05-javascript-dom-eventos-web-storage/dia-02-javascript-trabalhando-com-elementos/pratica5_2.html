@@ -1,0 +1,112 @@
+<!-- arquivo index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>  
+
+  <main>
+    <div id="start"></div>
+    nó
+    <p>elemento</p>
+  </main>
+
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+
+  <script>
+      // arquivo script.js
+      console.log(document.getElementById('start').nextSibling) // nó
+      
+      console.log(document.getElementById('start').nextElementSibling) // <p>elemento</p>
+
+      //Acesse o elemento elementoOndeVoceEsta.
+      let atual = document.querySelector('#elementoOndeVoceEsta')
+      console.log(atual)
+
+      //Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+      atual = atual.parentNode
+      atual.style.color = "red";
+      console.log(atual)
+
+      //Acesse o primeiroFilhoDoFilho e adicione um texto a ele. 
+      let primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho')
+      primeiroFilhoDoFilho.innerText = "7 Filho do 7 filho";
+      console.log(primeiroFilhoDoFilho)
+
+      //Você se lembra dos vídeos da aula anterior, como fazer isso?
+      //Acesse o primeiroFilho a partir de pai.
+      console.log(atual.firstElementChild)
+      
+      //Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+      atual = document.querySelector('#elementoOndeVoceEsta')
+      console.log(atual.previousElementSibling)
+
+      //Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+      atual = document.querySelector('#elementoOndeVoceEsta')
+      console.log(atual.nextSibling);
+
+      //Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+      atual = document.querySelector('#elementoOndeVoceEsta')
+      console.log(atual.nextElementSibling);
+
+      //Agora acesse o terceiroFilho a partir de pai.
+      atual = document.querySelector('#pai')
+      console.log(atual.firstElementChild.nextElementSibling.nextElementSibling);
+
+      //Crie um irmão para elementoOndeVoceEsta .
+      let parente = document.createElement("section");
+      parente.id = "irmaoElementoOndeVoceEsta"
+      parente.innerText = "Irmao Elemento Onde VoceEsta"
+      atual.appendChild(parente)
+      console.log(parente)
+
+      //Crie um filho para elementoOndeVoceEsta .
+      atual = document.querySelector('#elementoOndeVoceEsta')
+      parente = document.createElement("section")
+      parente.id = "filhoElementoOndeVoceEsta"
+      parente.innerText = "Filho Elemento Onde Voce Esta"
+      atual.appendChild(parente);
+      console.log(parente)
+
+      //Crie um filho para primeiroFilhoDoFilho .
+      atual = document.querySelector('#primeiroFilhoDoFilho')
+      parente = document.createElement("section")
+      parente.id = "primeiroFilhoDoPrimeiroFilhoDoFilho"
+      parente.innerText = "Primeiro Filho Do Primeiro Filho Do Filho"
+      atual.appendChild(parente);
+      console.log(parente)
+
+      //A partir desse filho criado, acesse terceiroFilho .
+      atual = document.querySelector('#primeiroFilhoDoPrimeiroFilhoDoFilho')
+      console.log(atual.parentNode.parentNode.nextElementSibling)
+
+      //Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e 
+      //primeiroFilhoDoFilho .
+      atual = document.querySelector('#pai');
+
+      //elementoOndeVoceEsta terceiroFilho quartoEUltimoFilho
+      atual.removeChild(document.querySelector("#primeiroFilho"))
+      atual.removeChild(document.querySelector("#elementoOndeVoceEsta"))
+      atual.removeChild(document.querySelector("#terceiroFilho"))
+      atual.removeChild(document.querySelector("#quartoEUltimoFilho"))
+      atual.removeChild(document.querySelector("#irmaoElementoOndeVoceEsta"))
+
+  </script>
+</body>
+</html>
