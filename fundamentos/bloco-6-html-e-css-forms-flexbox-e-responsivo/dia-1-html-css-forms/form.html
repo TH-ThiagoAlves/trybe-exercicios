@@ -6,52 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Exercicio 6.1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
 </head>
 <body>
-    <fieldset>
-        <input type="text" name="nome" placeholder="Nome" id="" required maxlength="40">
+    <form action="#" id="form">
+        <fieldset>
+            <input type="text" 
+                   name="name" 
+                   placeholder="Nome" 
+                   id="name" 
+                   required 
+                   maxlength="40">
+            <br><br>
+            <input type="email" 
+                   name="email" 
+                   placeholder="E-mail" 
+                   required 
+                   maxlength="50" 
+                   id="email">
+            <br><br>
+            <input type="text"   
+                   name="cpf" 
+                   placeholder="CPF" 
+                   required 
+                   maxlength="11" 
+                   id="">
+            <br><br>
+            <input type="text" 
+                   placeholder="Endereço" 
+                   required 
+                   maxlength="200" 
+                   name="endereco" 
+                   id="">
+            <br><br>
+            <input type="text" 
+                   placeholder="Cidade" 
+                   required 
+                   maxlength="28" 
+                   name="city" 
+                   id="">
+            <br><br>
+            <select name="" id="" >
+            </select>
+            <br><br>
+            <label for="radio1">
+                Casa<input type="radio" 
+                           name="radio" 
+                           id="radio1" 
+                           required>
+            </label>
+            <label for="radio2">
+                Apartamento<input type="radio" 
+                                  name="radio" 
+                                  id="radio2" 
+                                  required>
+            </label>
+        </fieldset>
         <br><br>
-        <input type="email" name="email" placeholder="E-mail" required maxlength="50" id="">
-        <br><br>
-        <input type="text" name="cpf" placeholder="CPF" required maxlength="11" id="">
-        <br><br>
-        <input type="text" placeholder="Endereço" required maxlength="200" name="endereco" id="">
-        <br><br>
-        <input type="text" placeholder="Cidade" required maxlength="28" name="city" id="">
-        <br><br>
-        <select name="" id="">
-        </select>
-        <br><br>
-        <label for="radio1">Casa<input type="radio" name="radio" id="radio1" required></label>
-        <label for="radio2">Apartamento<input type="radio" name="radio" id="radio2" required></label>
-        
-    </fieldset>
-    <br><br>
 
-    <fieldset>
-        <label for="resumoCurriculo">Resumo Currículo</label>
-        <br>
-        <textarea style="resize: none" required maxlength="1000" name="textarea" id="resumoCurriculo" cols="30" rows="10"></textarea>
-        <br><br>
-        <input type="text" placeholder="Cargo" required maxlength="40" name="cargo" id="">
-        <br><br>
-        <input type="text" placeholder="Descrição do cargo" required maxlength="500" name="descricao_cargo" id="">
-        <br><br>
-        <input type="text" name="" id="data" required placeholder="dd/mm/aa" maxlength="10">
-        <br><br>
-        <input type="submit" value="Enviar">
-        <br><br>
-        <input type="reset" value="Limpar">
-    </fieldset>
+        <fieldset>
+            <label for="message">Resumo Currículo</label>
+            <br>
+            <textarea style="resize: none" 
+                      required 
+                      maxlength="1000" 
+                      name="message" 
+                      id="message" 
+                      cols="30" 
+                      rows="10"></textarea>
+            <br><br>
+            <input type="text" 
+                   placeholder="Cargo" 
+                   required 
+                   maxlength="40" 
+                   name="cargo" 
+                   id="">
+            <br><br>
+            <input type="text" 
+                   placeholder="Descrição do cargo" 
+                   required 
+                   maxlength="500" 
+                   name="descricao_cargo" 
+                   id="">
+            <br><br>
+            <input type="text" 
+                   name="" 
+                   id="data-inicio" 
+                   required 
+                   placeholder="dd/mm/aa" 
+                   value="9 Oct 2014" 
+                   maxlength="10">
+            <br><br>
+            <input type="submit" value="Enviar">
+            <br><br>
+            <input type="reset" value="Limpar">
+        </fieldset>
+    
+        <div id="formularioCompleto"></div>
+    
+        <div id="erro"></div>
+    </form>
+    
 
-    <div id="formularioCompleto"></div>
-
-    <div id="erro"></div>
-
-
-
-
-    <script src="script.js"></script>
+<script src = "https://cdn.jsdelivr.net/npm/pikaday/moment.js"></script> 
+<script src = "https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script src = "script.js"></script>
 </body>
 </html>
 
